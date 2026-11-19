@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Environment and credentials (never commit real values)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+*.pvk
+*.snk
+credentials*.json
+secrets*.json
+
+# SQL Server backups and database files
+*.bak
+*.trn
+*.mdf
+*.ndf
+*.ldf
+*.bacpac
+
+# Logs, temp and local test artifacts
+*.log
+*.tmp
+npm-debug.log*
+coverage/
+.nyc_output/
+test-results/
+tmp/
+temp/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+

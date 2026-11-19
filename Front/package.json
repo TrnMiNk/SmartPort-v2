@@ -1,0 +1,15 @@
+{
+  "name": "smartport-front",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SmartPort V2 frontend (static HTML/CSS/JS, no build step).",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test \"test/unit/**/*.test.js\"",
+    "test:e2e": "node --test --test-concurrency=1 \"test/e2e/**/*.test.js\""
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "puppeteer-core": "^25.18.1"
+  }
+}

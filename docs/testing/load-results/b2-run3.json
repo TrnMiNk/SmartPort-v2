@@ -1,0 +1,432 @@
+{
+  "config": {
+    "users": 100,
+    "seconds": 40,
+    "burstSeconds": 20,
+    "node": "v24.14.0",
+    "cpus": 16,
+    "db": "SmartPortV2_LoadB2"
+  },
+  "phases": {
+    "A_steady": {
+      "seconds": 41.3,
+      "requests": 3968,
+      "throughputRps": 96,
+      "overall": {
+        "n": 3968,
+        "ok": 3968,
+        "failed": 0,
+        "over3s": 0,
+        "p50": 13.9,
+        "p95": 64.8,
+        "p99": 195.2,
+        "max": 359.1,
+        "mean": 23.5
+      }
+    },
+    "B_burst": {
+      "seconds": 20.2,
+      "requests": 7871,
+      "throughputRps": 390.4,
+      "overall": {
+        "n": 7871,
+        "ok": 7871,
+        "failed": 0,
+        "over3s": 0,
+        "p50": 249.2,
+        "p95": 343.5,
+        "p99": 401.4,
+        "max": 550.5,
+        "mean": 255
+      }
+    }
+  },
+  "sql": {
+    "lockWaitsDuringRun": 943,
+    "lockWaitMsDuringRun": 7691,
+    "deadlocks": 0,
+    "lockTimeouts": 833
+  },
+  "sse": {
+    "connectionsOpened": 160,
+    "expected": 160,
+    "refreshFramesSeen": 16380
+  },
+  "byOperation": {
+    "A GET auth/me": {
+      "n": 255,
+      "ok": 255,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 7.7,
+      "p95": 26,
+      "p99": 87,
+      "max": 89.7,
+      "mean": 12.8
+    },
+    "A GET berth chart": {
+      "n": 131,
+      "ok": 131,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 11.3,
+      "p95": 29.6,
+      "p99": 179.9,
+      "max": 192,
+      "mean": 17.1
+    },
+    "A GET berth plans": {
+      "n": 415,
+      "ok": 415,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 11.6,
+      "p95": 35.9,
+      "p99": 197.9,
+      "max": 220.8,
+      "mean": 20.3
+    },
+    "A GET berth status": {
+      "n": 475,
+      "ok": 475,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 9.7,
+      "p95": 39,
+      "p99": 128.6,
+      "max": 136.7,
+      "mean": 16.8
+    },
+    "A GET notifications": {
+      "n": 504,
+      "ok": 504,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 13.3,
+      "p95": 39.8,
+      "p99": 209.9,
+      "max": 211.4,
+      "mean": 21.9
+    },
+    "A GET queue": {
+      "n": 366,
+      "ok": 366,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 19.2,
+      "p95": 176.4,
+      "p99": 195.2,
+      "max": 195.9,
+      "mean": 31.6
+    },
+    "A GET schedule (list)": {
+      "n": 461,
+      "ok": 461,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 12.7,
+      "p95": 36.7,
+      "p99": 253,
+      "max": 254.8,
+      "mean": 20.9
+    },
+    "A GET ships (list)": {
+      "n": 238,
+      "ok": 238,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 13.2,
+      "p95": 52.6,
+      "p99": 168,
+      "max": 170,
+      "mean": 22
+    },
+    "A GET voyages (list)": {
+      "n": 604,
+      "ok": 604,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 12,
+      "p95": 38.7,
+      "p99": 160.4,
+      "max": 190.5,
+      "mean": 18.9
+    },
+    "A PATCH queue move (409 = someone moved first)": {
+      "n": 49,
+      "ok": 49,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 14,
+      "p95": 32.3,
+      "p99": 66.9,
+      "max": 66.9,
+      "mean": 19.1
+    },
+    "A POST placement check (UC-026)": {
+      "n": 115,
+      "ok": 115,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 16.5,
+      "p95": 37.7,
+      "p99": 53.7,
+      "max": 71.2,
+      "mean": 20.3
+    },
+    "A POST voyage notice (save + validate + queue)": {
+      "n": 237,
+      "ok": 237,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 55.4,
+      "p95": 158.1,
+      "p99": 331.7,
+      "max": 359.1,
+      "mean": 70.7
+    },
+    "A PUT cargo hazard (save)": {
+      "n": 118,
+      "ok": 118,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 17,
+      "p95": 47.3,
+      "p99": 78.8,
+      "max": 79.7,
+      "mean": 21
+    },
+    "B GET auth/me": {
+      "n": 472,
+      "ok": 472,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 167.4,
+      "p95": 215.1,
+      "p99": 233.9,
+      "max": 245.9,
+      "mean": 170.4
+    },
+    "B GET berth chart": {
+      "n": 225,
+      "ok": 225,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 243.9,
+      "p95": 317.8,
+      "p99": 332.7,
+      "max": 346.7,
+      "mean": 253.2
+    },
+    "B GET berth plans": {
+      "n": 792,
+      "ok": 792,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 245.9,
+      "p95": 316,
+      "p99": 335.6,
+      "max": 347.2,
+      "mean": 253.6
+    },
+    "B GET berth status": {
+      "n": 943,
+      "ok": 943,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 209.6,
+      "p95": 266,
+      "p99": 280.8,
+      "max": 295,
+      "mean": 213.4
+    },
+    "B GET notifications": {
+      "n": 1142,
+      "ok": 1142,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 289.8,
+      "p95": 367.8,
+      "p99": 394.3,
+      "max": 418.9,
+      "mean": 297.8
+    },
+    "B GET queue": {
+      "n": 628,
+      "ok": 628,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 259.3,
+      "p95": 330.7,
+      "p99": 348.7,
+      "max": 361.5,
+      "mean": 266.4
+    },
+    "B GET schedule (list)": {
+      "n": 893,
+      "ok": 893,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 250.2,
+      "p95": 316.3,
+      "p99": 346.3,
+      "max": 352.9,
+      "mean": 256.2
+    },
+    "B GET ships (list)": {
+      "n": 493,
+      "ok": 493,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 248.1,
+      "p95": 316.4,
+      "p99": 330.9,
+      "max": 354.1,
+      "mean": 254.9
+    },
+    "B GET voyages (list)": {
+      "n": 1699,
+      "ok": 1699,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 248.6,
+      "p95": 319.5,
+      "p99": 343,
+      "max": 374.7,
+      "mean": 255.5
+    },
+    "B PATCH queue move (409 = someone moved first)": {
+      "n": 127,
+      "ok": 127,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 247.9,
+      "p95": 327.5,
+      "p99": 351,
+      "max": 355.3,
+      "mean": 258.5
+    },
+    "B POST placement check (UC-026)": {
+      "n": 235,
+      "ok": 235,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 364.7,
+      "p95": 466.7,
+      "p99": 495.8,
+      "max": 498.9,
+      "mean": 374.3
+    },
+    "B POST voyage notice (save + validate + queue)": {
+      "n": 3,
+      "ok": 3,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 511.3,
+      "p95": 550.5,
+      "p99": 550.5,
+      "max": 550.5,
+      "mean": 522.2
+    },
+    "B PUT cargo hazard (save)": {
+      "n": 219,
+      "ok": 219,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 220.2,
+      "p95": 283,
+      "p99": 298.9,
+      "max": 303.8,
+      "mean": 225.3
+    },
+    "l login": {
+      "n": 100,
+      "ok": 100,
+      "failed": 0,
+      "over3s": 0,
+      "p50": 581.2,
+      "p95": 600.9,
+      "p99": 602.1,
+      "max": 602.3,
+      "mean": 582.1
+    }
+  },
+  "login": {
+    "n": 100,
+    "ok": 100,
+    "failed": 0,
+    "over3s": 0,
+    "p50": 581.2225,
+    "p95": 600.89,
+    "p99": 602.0808,
+    "max": 602.3074,
+    "mean": 582.0621750000001
+  },
+  "errors": [],
+  "authzChecks": [
+    {
+      "name": "no cookie -> 401",
+      "expected": 401,
+      "actual": 401,
+      "pass": true
+    },
+    {
+      "name": "bad session -> 401",
+      "expected": 401,
+      "actual": 401,
+      "pass": true
+    },
+    {
+      "name": "agent reads berth plans -> 403",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    },
+    {
+      "name": "agent opens berth channel -> 403",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    },
+    {
+      "name": "coordinator approves a plan -> 403",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    },
+    {
+      "name": "yard staff submits a notice -> 403",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    },
+    {
+      "name": "manager moves the queue -> 403",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    },
+    {
+      "name": "agent submits for another agent's ship -> not created",
+      "expected": 403,
+      "actual": 403,
+      "pass": true
+    }
+  ],
+  "apiLogLines": [
+    "SmartPort API listening on 127.0.0.1:3201"
+  ],
+  "consistency": {
+    "noticesAccepted201": 240,
+    "voyageRowsCreated": 240,
+    "rowsWithoutHistory": 0,
+    "duplicateVoyageCodes": 0,
+    "validationRuns": 240,
+    "checkConsistencyExit": 0,
+    "checkConsistencyTail": [
+      "ok   every state change has an audit row (approve, reject, berthing, departure)",
+      "9 of 9 checks passed on SmartPortV2_LoadB2 (240 voyages)"
+    ]
+  },
+  "cleanup": "removed this run's users, ships, voyages, berths, agents and port; audit rows remain"
+}

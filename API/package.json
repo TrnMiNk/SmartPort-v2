@@ -1,0 +1,25 @@
+{
+  "name": "smartport-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SmartPort V2 API (Node.js/Express over SQL Server). Modules: M1 vessel arrival/departure, M2 berth scheduling.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "migrate": "node src/db/migrate.js",
+    "test:unit": "node --test \"test/unit/**/*.test.js\"",
+    "test:integration": "node scripts/run-integration.js",
+    "test": "node --test \"test/unit/**/*.test.js\"",
+    "seed": "node src/db/seed.js",
+    "seed:demo": "node src/db/seed.js dev_demo_catalog.sql"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^5.3.0",
+    "msnodesqlv8": "^6.2.2",
+    "mssql": "^12.7.14"
+  }
+}
